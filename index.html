@@ -872,7 +872,7 @@
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#prompts">Prompts</a></li>
             <li><a href="#narrative">Voice</a></li>
-            
+            <li><a href="#support">Support</a></li>
         </ul>
         
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
@@ -919,8 +919,6 @@
         <div class="hero-cta-group reveal reveal-delay-3">
             <a href="https://youtube.com/@grinsofficial?si=jOgXABE3r-LVxZpQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary">▶ Watch on YouTube</a>
             <a href="https://x.com/grinssst" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">𝕏 Follow on X</a>
-            <a href="https://on.soundcloud.com/zhBMULp1Matq5MKXy5" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">♪ SoundCloud</a>
-            <a href="https://streamlabs.com/kingsodik/tip" target="_blank" rel="noopener noreferrer" class="btn btn-primary">💸 Tip The Grin</a>
         </div>
     </section>
 
@@ -1116,6 +1114,44 @@
     </section>
 
     <!-- Prompt Vault -->
+    <section id="prompts">
+        <div class="section-header reveal">
+            <div class="section-label">Generation Kit</div>
+            <h2 class="section-title">Prompt Vault</h2>
+            <p class="section-desc">Reusable AI image-generation prompts for keeping Grin's design consistent across new artwork. Tap "Copy" and drop straight into your generator of choice.</p>
+        </div>
+
+        <div class="prompt-card reveal">
+            <div class="prompt-header">
+                <span class="prompt-title">01 — Character Reference Sheet</span>
+                <button class="prompt-copy" onclick="copyPrompt(this)">Copy</button>
+            </div>
+            <div class="prompt-body">character reference sheet, GRIN, pale porcelain-white round face, oversized white almond-shaped eyes with small dark pupils, wide stitched-looking smile stretched ear to ear showing square white teeth, bald smooth head, no visible body or minimal thin dark silhouette, matte black background, studio lighting, front view + side view + 3/4 view, uncanny valley, psychological horror mascot, minimalist, high contrast, vector-clean linework
+                <div class="prompt-negative">Negative: color, blood, gore, extra limbs, realistic skin texture, background clutter</div>
+            </div>
+        </div>
+
+        <div class="prompt-card reveal reveal-delay-1">
+            <div class="prompt-header">
+                <span class="prompt-title">02 — Close-Up Portrait</span>
+                <button class="prompt-copy" onclick="copyPrompt(this)">Copy</button>
+            </div>
+            <div class="prompt-body">extreme close-up portrait of GRIN, pale white mask-like face filling the frame, wide unsettling smile, glossy black void eyes with tiny white highlight, faint scratches on the surface of the face, dim single spotlight from below, deep black background, film grain, horror atmosphere, cinematic, 85mm lens look
+                <div class="prompt-negative">Negative: cute, cartoonish, bright colors, symmetrical soft lighting</div>
+            </div>
+        </div>
+
+        <div class="prompt-card reveal reveal-delay-2">
+            <div class="prompt-header">
+                <span class="prompt-title">03 — Environment / Scene</span>
+                <button class="prompt-copy" onclick="copyPrompt(this)">Copy</button>
+            </div>
+            <div class="prompt-body">GRIN standing motionless at the end of a long dark hallway, faint smile barely visible in the shadows, single flickering fluorescent light overhead, empty abandoned corridor, peeling walls, cold blue-grey color grade, found-footage horror still, wide shot, negative space, sense of dread
+                <div class="prompt-negative">Negative: warm colors, daylight, crowd, action pose</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Narrative / Voice -->
     <section class="narrative-section" id="narrative">
         <div class="section-header reveal" style="max-width:1100px;margin:0 auto 48px;padding:0 32px;">
@@ -1135,6 +1171,45 @@
     </section>
 
     <!-- Donation -->
+    <section id="support">
+        <div class="section-header reveal">
+            <div class="section-label">Keep The Grin Alive</div>
+            <h2 class="section-title">Support</h2>
+            <p class="section-desc">GRIN is an independent character project. Every bit of support goes straight into new art, animation, and voice work.</p>
+        </div>
+
+        <div class="donation-grid">
+            <div class="donation-card featured reveal">
+                <div class="donation-icon">🖤</div>
+                <h3>One-Time Tip</h3>
+                <p>Send a quick tip via QRIS — works with GoPay, OVO, DANA, ShopeePay, or any e-wallet/mobile banking app.</p>
+                <div class="amount-grid">
+                    <button class="amount-btn" onclick="selectAmount(this)">10K</button>
+                    <button class="amount-btn active" onclick="selectAmount(this)">25K</button>
+                    <button class="amount-btn" onclick="selectAmount(this)">50K</button>
+                    <button class="amount-btn" onclick="selectAmount(this)">100K</button>
+                </div>
+                <input type="text" class="custom-input" placeholder="Custom amount (IDR)">
+                <div class="qr-box">QRIS code goes here</div>
+                <button class="copy-btn" onclick="copyText(this, 'GRIN OFFICIAL — QRIS')">Copy QRIS Name</button>
+            </div>
+
+            <div class="donation-card reveal reveal-delay-1">
+                <div class="donation-icon">💌</div>
+                <h3>Recurring Support</h3>
+                <p>Become a monthly supporter through Trakteer or Saweria and get shoutouts in future GRIN videos.</p>
+                <div class="phone-display">0812-XXXX-XXXX</div>
+                <button class="copy-btn" onclick="copyText(this, '0812XXXXXXXX')">Copy Number</button>
+                <div class="payment-methods">
+                    <span class="payment-tag">Trakteer</span>
+                    <span class="payment-tag">Saweria</span>
+                    <span class="payment-tag">GoPay</span>
+                    <span class="payment-tag">DANA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Socials -->
     <section style="padding: 60px 32px; text-align: center;">
         <div class="section-header reveal" style="margin-bottom: 32px;">
@@ -1150,30 +1225,8 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 X / Twitter
             </a>
-            <a href="https://on.soundcloud.com/zhBMULp1Matq5MKXy5" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 16px 36px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;"><path d="M1.175 12.225c-.051 0-.094.046-.101.104l-.233 2.154.233 2.105c.007.058.05.104.101.104.05 0 .092-.046.099-.104l.255-2.105-.255-2.154c-.007-.058-.049-.104-.099-.104zm-.899.828c-.06 0-.091.037-.104.094l-.172 1.326.172 1.293c.013.057.044.093.104.093.058 0 .09-.037.101-.093l.196-1.293-.196-1.326c-.011-.057-.043-.094-.101-.094zm1.83-1.229c-.058 0-.106.045-.113.107l-.222 2.449.222 2.386c.007.062.055.107.113.107.061 0 .108-.045.116-.107l.253-2.386-.253-2.449c-.008-.062-.055-.107-.116-.107zm.945-.089c-.066 0-.12.052-.127.119l-.207 2.529.207 2.462c.007.066.061.119.127.119.065 0 .119-.053.128-.12l.235-2.461-.235-2.529c-.009-.067-.063-.119-.128-.119zm.984-.055c-.073 0-.132.058-.139.132l-.19 2.573.19 2.484c.007.075.066.132.139.132.072 0 .131-.057.14-.132l.216-2.484-.216-2.573c-.009-.074-.068-.132-.14-.132zm1.037-.083c-.081 0-.146.064-.152.146l-.174 2.646.174 2.499c.006.082.071.146.152.146.079 0 .145-.064.153-.146l.198-2.499-.198-2.646c-.008-.082-.074-.146-.153-.146zm1.083.03c-.089 0-.16.07-.166.16l-.156 2.605.156 2.51c.006.09.077.161.166.161.088 0 .16-.071.167-.161l.177-2.51-.177-2.605c-.007-.09-.079-.16-.167-.16zm1.14-.348c-.098 0-.176.078-.181.177l-.14 2.928.14 2.503c.005.099.083.177.181.177.096 0 .175-.078.181-.177l.159-2.503-.159-2.928c-.006-.099-.085-.177-.181-.177zm1.219-.639c-.108 0-.194.086-.199.196l-.121 3.559.121 2.483c.005.109.091.195.199.195.106 0 .193-.086.198-.195l.138-2.483-.138-3.559c-.005-.11-.092-.196-.198-.196zm1.276-.128c-.117 0-.211.093-.215.212l-.105 3.68.105 2.454c.004.119.098.211.215.211.115 0 .209-.092.214-.211l.12-2.454-.12-3.68c-.005-.119-.099-.212-.214-.212zm1.35-.297c-.126 0-.228.101-.232.229l-.088 3.964.088 2.415c.004.128.106.229.232.229.124 0 .226-.101.23-.229l.101-2.415-.101-3.964c-.004-.128-.106-.229-.23-.229zm1.469-.269c-.021-.002-.042-.003-.063-.003-.135 0-.245.107-.249.245l-.075 4.223.075 2.379c.004.138.114.245.249.245.021 0 .042-.001.063-.003.128-.017.226-.126.229-.256v-.001l.085-2.364-.085-4.208c-.003-.13-.101-.239-.229-.257zm10.086 2.943c-.363-.243-.798-.386-1.269-.386-.301 0-.588.058-.85.163-.156-1.789-1.656-3.19-3.485-3.19-.446 0-.877.084-1.267.238-.152.06-.192.121-.194.24v6.729c.002.126.099.229.221.24.011.001 5.643.003 5.649.003 1.145 0 2.073-.928 2.073-2.072 0-.812-.469-1.514-1.15-1.851z"/></svg>
-                SoundCloud
-            </a>
-            <a href="https://streamlabs.com/kingsodik/tip" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 16px 36px;">
-                💸 Tip The Grin
-            </a>
         </div>
-        <p style="margin-top: 20px; color: var(--text-dim); font-size: 13px; letter-spacing: 0.5px;">Check out Grin's Music on #SoundCloud</p>
     </section>
-
-    <!-- Ad Banner 300x250 -->
-    <div style="display: flex; justify-content: center; padding: 20px 32px 60px;">
-        <script>
-          atOptions = {
-            'key' : '194667a0b31fd6a29d90d66946902313',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-        <script src="https://oatstuckalfred.com/194667a0b31fd6a29d90d66946902313/invoke.js"></script>
-    </div>
 
     <!-- Footer -->
     <footer>
@@ -1181,9 +1234,9 @@
         <div class="footer-links">
             <a href="#origin">Origin</a>
             <a href="#gallery">Gallery</a>
+            <a href="#prompts">Prompts</a>
             <a href="#narrative">Voice</a>
-            <a href="https://youtube.com/@grinsofficial?si=jOgXABE3r-LVxZpQ" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a href="https://x.com/grinssst" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+            <a href="#support">Support</a>
         </div>
         <p class="footer-copy">© 2026 GRIN Archive. All Rights Reserved.</p>
         <p class="footer-warning">Do not look directly at the screen for too long.</p>
@@ -1227,6 +1280,21 @@
             });
         }
 
+        // Generic copy (used by donation section)
+        function copyText(btn, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const orig = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = orig, 2000);
+            });
+        }
+
+        // Donation amount selector
+        function selectAmount(btn) {
+            btn.parentElement.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
         // Mobile menu toggle
         function toggleMenu() {
             const links = document.querySelector('.nav-links');
@@ -1242,8 +1310,5 @@
             links.style.backdropFilter = 'blur(12px)';
         }
     </script>
-
-    <div id="container-a2436765650262a612350e32e896fce7"></div>
-    <script async="async" data-cfasync="false" src="https://oatstuckalfred.com/a2436765650262a612350e32e896fce7/invoke.js"></script>
 </body>
 </html>
